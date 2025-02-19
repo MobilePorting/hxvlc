@@ -13,8 +13,14 @@
 	</section>
 
 	<section if="windows">
-		<assets path="project/vlc/lib/Windows" rename="" exclude="*.lib" library="libvlc" />
-		<assets path="project/vlc/plugins/Windows" rename="plugins" library="libvlc" />
+		<section if="HXVLC_EXPERIMENTAL_WINDOWSARM">
+			<assets path="project/vlc/lib/WindowsArm" rename="" exclude="*.lib" library="libvlc" />
+			<assets path="project/vlc/plugins/WindowsArm" rename="plugins" library="libvlc" />
+		</section>
+		<section unless="HXVLC_EXPERIMENTAL_WINDOWSARM">
+			<assets path="project/vlc/lib/Windows" rename="" exclude="*.lib" library="libvlc" unless="HXVLC_EXPERIMENTAL_WINDOWSARM" />
+			<assets path="project/vlc/plugins/Windows" rename="plugins" library="libvlc" />
+		</section>
 		<assets path="project/vlc/share" rename="" exclude="*.lua" library="libvlc" if="HXVLC_SHARE_DIRECTORY" />
 	</section>
 

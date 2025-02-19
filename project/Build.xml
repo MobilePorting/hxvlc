@@ -20,6 +20,11 @@
 		<vflag name="-rpath" value="@executable_path/lib/" if="macos" />
 
 		<section if="windows">
+			<section if="HXVLC_EXPERIMENTAL_WINDOWSARM">
+				<lib name="${PROJECT_DIR}/lib/WindowsArm/libvlc.lib" />
+				<lib name="${PROJECT_DIR}/lib/WindowsArm/libvlccore.lib" />
+			</section>
+
 			<section if="HXCPP_M64">
 				<lib name="${PROJECT_DIR}/lib/Windows/libvlc.lib" />
 				<lib name="${PROJECT_DIR}/lib/Windows/libvlccore.lib" />

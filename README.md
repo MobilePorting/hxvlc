@@ -10,9 +10,10 @@ A Haxe/[OpenFL](https://www.openfl.org) library for **@:native** video playback 
 
 ### Supported Platforms
 
+**For Windows ARM64 use `HXVLC_EXPERIMENTAL_WINDOWSARM`**
 **Hashlink or Neko are not supported**
 
-- **Windows** (x86_64 only)
+- **Windows** (x86_64 and arm64 only)
 - **MacOS** (x86_64 and arm64 only)
 - **Linux**
 - **Android** (arm64, armv7a, x86, and x86_64 only)
